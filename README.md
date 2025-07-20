@@ -43,6 +43,7 @@
 ## Bitwise Operations
 
 ## Severals
+- [cJSON](https://github.com/DaveGamble/cJSON) - Ultralightweight JSON parser in ANSI C.
 - [Doxygen](https://doxygen.nl/) -  Doxygen is a widely-used documentation generator tool in software development.
 
 ## 
