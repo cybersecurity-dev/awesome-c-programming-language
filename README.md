@@ -14,6 +14,33 @@
     <img src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/bar.gif">
 </p>
 
+## Declarations & Definitions
+
+## Type Conversions
+
+## Arrays
+
+## Scope & Name Lookup
+
+## Pointers
+
+## Pointer Arrays
+
+## Pointer to pointer
+
+## void Pointers
+
+## Function Pointers
+
+## Dynamic Memory Management
+
+## Structures
+
+## Unions
+
+## Enumarations
+
+## Bitwise Operations
 
 ## Severals
 - [Doxygen](https://doxygen.nl/) -  Doxygen is a widely-used documentation generator tool in software development.
