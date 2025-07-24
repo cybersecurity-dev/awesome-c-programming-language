@@ -47,8 +47,8 @@
 - [Doxygen](https://doxygen.nl/) -  Doxygen is a widely-used documentation generator tool in software development.
 
 ## Compiler/Debugger
-- [MSVC & GCC & Clang](https://github.com/cybersecurity-dev/PowerShell-Toolkit/#c-cpp) - installation step of MSVC/GCC/Clang compiler in **Windows**
-- [GCC & Clang](https://github.com/cybersecurity-dev/Bash-Toolkit/#cc) - installation step of GCC/Clang compiler in **Linux**
+- [MSVC & GCC & Clang](https://github.com/cybersecurity-dev/PowerShell-Toolkit/#install-c-cpp) - installation step of MSVC/GCC/Clang compiler in **Windows**
+- [GCC & Clang](https://github.com/cybersecurity-dev/Bash-Toolkit/#install-c-cpp) - installation step of GCC/Clang compiler in **Linux**
 - [OnlineGDB](https://www.onlinegdb.com/) - **Online** compiler and debugger for C/C++
 
 ## 
