@@ -21,6 +21,7 @@
 </p>
 
 ## 📖 Contents
+- [Pointers](#pointers)
 - [My Other Awesome Lists](#my-other-awesome-lists)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -33,7 +34,18 @@
 
 ## Scope & Name Lookup
 
-## Pointers
+## [Pointers](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Pointers.html)
+
+```c
+int ival;
+double darray[5];
+
+```
+
+- ival has type int; we say &ival is a `"pointer to int."`
+- darray has type double[5]; we say &darray is a `"pointer to an array of five doubles."`
+- darray[3] has type double; we say &darray[3] is a `"pointer to double."`
+
 
 ## Pointer Arrays
 
