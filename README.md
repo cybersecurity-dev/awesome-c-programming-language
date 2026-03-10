@@ -6,7 +6,7 @@
     </p>
 
 # **`Awesome`** [C](https://wikipedia.org/wiki/ANSI_C) Programming [Language](https://wikipedia.org/wiki/C_(programming_language)) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[ANSI C](https://wikipedia.org/wiki/ANSI_C) | [C99](https://wikipedia.org/wiki/C99) | [C11](https://wikipedia.org/wiki/C11_(C_standard_revision)) | [C17](https://wikipedia.org/wiki/C17_(C_standard_revision)) | [C23](https://wikipedia.org/wiki/C23_(C_standard_revision))
+[**`ANSI C`**](https://wikipedia.org/wiki/ANSI_C) | [**`C99`**](https://wikipedia.org/wiki/C99) | [**`C11`**](https://wikipedia.org/wiki/C11_(C_standard_revision)) | [**`C17`**](https://wikipedia.org/wiki/C17_(C_standard_revision)) | [**`C23`**](https://wikipedia.org/wiki/C23_(C_standard_revision))
 </div>
 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/playlist?list=PL9V4Zu3RroiV8oriwlPA6uUzB_SB0GzxY&si=aZ40OWv_hIcQA1U2)
