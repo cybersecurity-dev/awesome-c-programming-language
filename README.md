@@ -53,6 +53,19 @@ double darray[5];
 ## Pointer to pointer
 
 ## void Pointers
+**`void *`** is needed in `C` to allow generic programming and type‑independent memory operations in language. For example; void * is the type returned by malloc and calloc. So it works for any type with void pointer.
+
+```c
+// Allocate memory for 5 integers
+void *raw = malloc(5 * sizeof(int));
+if (!raw) return 1;
+
+int *arr = (int *)raw;
+//...
+
+free(arr);
+
+```
 
 ## Function Pointers
 
