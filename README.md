@@ -97,9 +97,9 @@ int main(void) {
 ```
 ## Dynamic Memory Management
 
-## Structures
+## [Structures](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Structures.html)
 
-## Unions
+## [Unions](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Unions.html)
 A `union` is like a struct, but all members share the same memory location. This means:
 - A union can store only one member at a time
 - Size of union = size of its **largest member**
