@@ -100,7 +100,33 @@ int main(void) {
 ## Structures
 
 ## Unions
+A `union` is like a struct, but all members share the same memory location. This means:
+- A union can store only one member at a time
+- Size of union = size of its **largest member**
+- Writing to one member affects all others (because they `overlap in memory`)
+```c
+union Data {
+    int ival;
+    float fval;
+    char cval;
+};
 
+int main() {
+    union Data Dval;
+
+    Dval.ival = 26;
+    printf("Dval.ival = %d\n", Dval.ival);
+
+    Dval.fval = 3.14;
+    printf("Dval.fval = %.2f\n", Dval.fval);
+
+    Dval.cval = 'A';
+    printf("Dval.c = %c\n", Dval.cval);
+
+    return 0;
+}
+
+```
 ## Enumarations
 
 ## Bitwise Operations
