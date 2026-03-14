@@ -121,7 +121,7 @@ int main() {
     printf("Dval.fval = %.2f\n", Dval.fval);
 
     Dval.cval = 'A';
-    printf("Dval.c = %c\n", Dval.cval);
+    printf("Dval.cval = %c\n", Dval.cval);
 
     return 0;
 }
