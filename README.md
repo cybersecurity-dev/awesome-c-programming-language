@@ -98,6 +98,31 @@ int main(void) {
 ## Dynamic Memory Management
 
 ## [Structures](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Structures.html)
+A struct in C is a  user-defined data type grouped together under one name.
+Its members can be of different data types (_unlike arrays_).
+
+```c
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+
+int main() {
+    struct Person p1;
+
+    // Assign values
+    strcpy(p1.name, "Alex");
+    p1.age = 25;
+    p1.height = 1.75f;
+
+    printf("Name:\t%s\n", p1.name);
+    printf("Age:\t%d\n", p1.age);
+    printf("Height:\t%.2f\n", p1.height);
+
+    return 0;
+}
+```
 
 ## [Unions](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Unions.html)
 A `union` is like a struct, but all members share the same memory location. This means:
@@ -125,8 +150,8 @@ int main() {
 
     return 0;
 }
-
 ```
+
 ## Enumarations
 
 ## Bitwise Operations
