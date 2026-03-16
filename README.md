@@ -23,6 +23,11 @@
 
 ## 📖 Contents
 - [Pointers](#pointers)
+    - [Pointer to pointer](#pointer-to-pointer)
+    - [void pointers](#void-pointers)
+    - [Function Pointers](#function-pointers)
+- [Structures](#structures)
+- [Unions](#unions)
 - [My Other Awesome Lists](#my-other-awesome-lists)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -48,15 +53,15 @@ double darray[5];
 - darray[3] has type double; we say &darray[3] is a `"pointer to double."`
 
 
-## Pointer Arrays
+### Pointer Arrays
 
-## Pointer to pointer
+### Pointer to pointer
 
 - `A T *` points to a **`T`**.
 - `A T **` points to a **`T *`**.
 
 
-## [void pointers](https://wikipedia.org/wiki/Void_type)
+### [void pointers](https://wikipedia.org/wiki/Void_type)
 **`void *`** is needed in `C` to allow generic programming and type‑independent memory operations in language. For example; void * is the type returned by malloc and calloc. So it works for any type with void pointer.
 
 ```c
@@ -71,7 +76,7 @@ free(arr);
 
 ```
 
-## [Function Pointers](https://wikipedia.org/wiki/Function_pointer)
+### [Function Pointers](https://wikipedia.org/wiki/Function_pointer)
 
 A `function pointer` in C is a variable that stores the **address of a function**, just like a normal pointer stores the address of data.
 
