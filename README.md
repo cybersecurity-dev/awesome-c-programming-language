@@ -100,7 +100,37 @@ int main(void) {
     return 0;
 }
 ```
-## Dynamic Memory Management
+## [Dynamic Memory Management](https://wikipedia.org/wiki/C_dynamic_memory_allocation)
+
+### malloc
+```c
+int ptrIArray[10];
+```
+
+`malloc()` takes a single argument (**the amount of memory to allocate in bytes**).
+
+```c
+// without a cast
+void *raw = malloc(10 * sizeof(int));
+if (!raw) return 1;
+
+int *ptrIArray = (int *)raw;
+```
+
+```c
+// with a cast
+int *ptrIArray = (int*)malloc(10 * sizeof(int));
+```
+
+### realloc
+
+### calloc
+
+### free
+Releases the specified block of memory back to the system.
+```c
+free(ptrIArray);
+```
 
 ## [Structures](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Structures.html)
 A struct in C is a  user-defined data type grouped together under one name.
