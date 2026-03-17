@@ -26,8 +26,17 @@
     - [Pointer to pointer](#pointer-to-pointer)
     - [void pointers](#void-pointers)
     - [Function Pointers](#function-pointers)
+- [Dynamic Memory Management](#dynamic-memory-management)
+    - [malloc](#malloc)
+    - [calloc](#calloc)
+    - [free](#free) 
 - [Structures](#structures)
 - [Unions](#unions)
+- [Enumarations](#enumarations)
+- [Bitwise Operations]()
+- [C string handling]()
+- [C Signal Handling]()
+- [C Process Control]()
 - [My Other Awesome Lists](#my-other-awesome-lists)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -190,6 +199,12 @@ int main() {
 ## Enumarations
 
 ## Bitwise Operations
+
+## C string handling
+
+## C Signal Handling
+
+## C Process Control
 
 ## Severals
 - [cJSON](https://github.com/DaveGamble/cJSON) - Ultralightweight JSON parser in ANSI C.
