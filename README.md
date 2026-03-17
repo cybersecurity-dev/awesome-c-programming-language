@@ -33,10 +33,10 @@
 - [Structures](#structures)
 - [Unions](#unions)
 - [Enumarations](#enumarations)
-- [Bitwise Operations]()
-- [C string handling]()
-- [C Signal Handling]()
-- [C Process Control]()
+- [Bitwise Operations](#bitwise-operations)
+- [C String Handling](#c-string-handling)
+- [C Signal Handling](#c-signal-handling)
+- [C Process Control](#c-process-control)
 - [My Other Awesome Lists](#my-other-awesome-lists)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -196,15 +196,15 @@ int main() {
 }
 ```
 
-## Enumarations
+## [Enumarations](https://cppreference.com/w/c/language/enum.html)
 
-## Bitwise Operations
+## [Bitwise Operations](https://wikipedia.org/wiki/Bitwise_operations_in_C)
 
-## C string handling
+## [C String Handling](https://wikipedia.org/wiki/C_string_handling)
 
-## C Signal Handling
+## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
-## C Process Control
+## [C Process Control](https://wikipedia.org/wiki/C_process_control)
 
 ## Severals
 - [cJSON](https://github.com/DaveGamble/cJSON) - Ultralightweight JSON parser in ANSI C.
