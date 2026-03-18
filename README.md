@@ -131,8 +131,6 @@ int *ptrIArray = (int *)raw;
 int *ptrIArray = (int*)malloc(10 * sizeof(int));
 ```
 
-
-
 ### calloc
 Allocates memory for an array of num objects of size and initializes all bytes in the allocated storage to zero.
 ```c
@@ -150,6 +148,20 @@ for (iter = 0; iter < 5; ++i) {
     printf("%d ", ptrIArrayCalloc[iter]);   // contains -> 0
 }
 ```
+
+* When to Use What?
+    * ✔ `Use malloc()` when:
+        * You will immediately assign data to all elements.
+        * You want slightly faster allocation.
+
+    * ✔ `Use calloc()` when:
+        * You need zero-initialized memory.
+        * You want to avoid uninitialized garbage data.
+        * You are creating:
+            * Arrays
+            * Buffers
+            * Structs
+            * Strings
 
 ### realloc
 
