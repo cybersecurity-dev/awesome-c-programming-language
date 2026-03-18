@@ -131,9 +131,27 @@ int *ptrIArray = (int *)raw;
 int *ptrIArray = (int*)malloc(10 * sizeof(int));
 ```
 
-### realloc
+
 
 ### calloc
+Allocates memory for an array of num objects of size and initializes all bytes in the allocated storage to zero.
+```c
+int *ptrIArray = (int *) calloc(5, sizeof(int));
+for (iter = 0; iter < 5; ++i) {
+    printf("%d ", ptrIArray[iter]);   // contains -> 0
+}
+```
+
+```c
+int *ptrIArrayMalloc = (int *) malloc(5, sizeof(int));
+int *ptrIArrayCalloc = (int *) calloc(5, sizeof(int));
+for (iter = 0; iter < 5; ++i) {
+    printf("%d ", ptrIArrayMalloc[iter]);   // contains -> garbage value
+    printf("%d ", ptrIArrayCalloc[iter]);   // contains -> 0
+}
+```
+
+### realloc
 
 ### free
 Releases the specified block of memory back to the system.
