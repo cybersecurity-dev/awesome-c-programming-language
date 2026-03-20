@@ -300,6 +300,11 @@ int main() {
 This is a rule of Unix/Linux systems — no C program can override this. These two signals are designed to always work, even if the process is misbehaving.
 **`SIGKILL`** immediately stops (`kills`) the process — the **kernel** does not let your program run anything in response.
 
+| Signal Number | `Name`    | Meaning         | `Catchable?` |
+|---------------|---------|------------------|-------------|
+| 9             | SIGKILL | Kill immediately | ❌ No       |
+| 19            | SIGSTOP | Stop immediately | ❌ No       |
+
 ```c
 // Signal handler function
 void handle_signal(int sig)
@@ -354,11 +359,39 @@ int main() {
 }
 ```
 
-| Signal Number | Name    | Meaning         | Catchable? |
-|---------------|---------|------------------|-------------|
-| 9             | SIGKILL | Kill immediately | ❌ No       |
-| 19            | SIGSTOP | Stop immediately | ❌ No       |
-
+| Signal Number | `Name`      | Meaning                                      | `Catchable?` |
+|---------------|-------------|----------------------------------------------|------------|
+| 1             | SIGHUP      | Hangup detected                              | ✔ Yes      |
+| 2             | SIGINT      | Interrupt (Ctrl+C)                           | ✔ Yes      |
+| 3             | SIGQUIT     | Quit (Ctrl+\)                                | ✔ Yes      |
+| 4             | SIGILL      | Illegal instruction                          | ✔ Yes      |
+| 5             | SIGTRAP     | Trace/breakpoint trap                        | ✔ Yes      |
+| 6             | SIGABRT     | Abort                                        | ✔ Yes      |
+| 7             | SIGBUS      | Bus error                                    | ✔ Yes      |
+| 8             | SIGFPE      | Floating‑point exception                     | ✔ Yes      |
+| 9             | SIGKILL     | Kill immediately                             | ❌ No      |
+| 10            | SIGUSR1     | User-defined signal 1                        | ✔ Yes      |
+| 11            | SIGSEGV     | Segmentation fault                           | ✔ Yes      |
+| 12            | SIGUSR2     | User-defined signal 2                        | ✔ Yes      |
+| 13            | SIGPIPE     | Broken pipe                                  | ✔ Yes      |
+| 14            | SIGALRM     | Alarm clock                                  | ✔ Yes      |
+| 15            | SIGTERM     | Termination request                          | ✔ Yes      |
+| 16            | SIGSTKFLT   | Stack fault (Linux specific)                 | ✔ Yes      |
+| 17            | SIGCHLD     | Child stopped/terminated                     | ✔ Yes      |
+| 18            | SIGCONT     | Continue executing                           | ✔ Yes      |
+| 19            | SIGSTOP     | Stop the process                             | ❌ No      |
+| 20            | SIGTSTP     | Stop (Ctrl+Z)                                | ✔ Yes      |
+| 21            | SIGTTIN     | Background read from TTY                     | ✔ Yes      |
+| 22            | SIGTTOU     | Background write to TTY                      | ✔ Yes      |
+| 23            | SIGURG      | Urgent condition on socket                   | ✔ Yes      |
+| 24            | SIGXCPU     | CPU time limit exceeded                      | ✔ Yes      |
+| 25            | SIGXFSZ     | File size limit exceeded                     | ✔ Yes      |
+| 26            | SIGVTALRM   | Virtual alarm clock                          | ✔ Yes      |
+| 27            | SIGPROF     | Profiling timer expired                      | ✔ Yes      |
+| 28            | SIGWINCH    | Window size change                           | ✔ Yes      |
+| 29            | SIGIO       | I/O now possible                             | ✔ Yes      |
+| 30            | SIGPWR      | Power failure                                | ✔ Yes      |
+| 31            | SIGSYS      | Bad system call                              | ✔ Yes      |
 
 ## [C Process Control](https://wikipedia.org/wiki/C_process_control)
 
