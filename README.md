@@ -294,8 +294,8 @@ int main() {
 
 ## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
-❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
-❌ `SIGSTOP` cannot be handled either.
+* ❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
+* ❌ `SIGSTOP` cannot be handled either.
 ```c
 // Signal handler function
 void handle_signal(int sig)
