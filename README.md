@@ -296,6 +296,10 @@ int main() {
 
 * ❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
 * ❌ `SIGSTOP` cannot be handled either.
+
+This is a rule of Unix/Linux systems — no C program can override this. These two signals are designed to always work, even if the process is misbehaving.
+**`SIGKILL`** immediately stops (`kills`) the process — the **kernel** does not let your program run anything in response.
+
 ```c
 // Signal handler function
 void handle_signal(int sig)
@@ -349,6 +353,12 @@ int main() {
     return 0;
 }
 ```
+
+| Signal Number | Name    | Meaning         | Catchable? |
+|---------------|---------|------------------|-------------|
+| 9             | SIGKILL | Kill immediately | ❌ No       |
+| 19            | SIGSTOP | Stop immediately | ❌ No       |
+
 
 ## [C Process Control](https://wikipedia.org/wiki/C_process_control)
 
