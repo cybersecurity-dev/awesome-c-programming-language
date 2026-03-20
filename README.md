@@ -294,6 +294,62 @@ int main() {
 
 ## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
+❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
+❌ `SIGSTOP` cannot be handled either.
+```c
+// Signal handler function
+void handle_signal(int sig)
+{
+    printf("\nReceived signal %d : ", sig);
+
+    switch (sig) {
+        case SIGINT:  printf("SIGINT\t(Ctrl + C)\n"); break;
+        case SIGTERM: printf("SIGTERM\t(termination request)\n"); break;
+        case SIGABRT: printf("SIGABRT\t(abort)\n"); break;
+        case SIGFPE:  printf("SIGFPE\t(floating point exception)\n"); break;
+        case SIGSEGV: printf("SIGSEGV\t(segmentation fault)\n"); break;
+        case SIGILL:  printf("SIGILL\t(illegal instruction)\n"); break;
+        case SIGQUIT: printf("SIGQUIT\t(Ctrl+\\)\n"); break;
+        case SIGTSTP: printf("SIGTSTP\t(Ctrl+Z)\n"); break;
+        default:      printf("Unhandled signal\n"); break;
+    }
+
+    // exit on specific signals
+    if (sig == SIGTERM || sig == SIGINT) {
+        printf("Exiting program...\n");
+        exit(0);
+    }
+}
+
+int main() {
+    printf("Process ID: %d\n", getpid());
+    printf("Waiting for signals... Press Ctrl+C to exit.\n\n");
+
+    // List of signals we want to catch
+    int signals_to_catch[] = {
+        SIGINT, SIGTERM, SIGABRT, SIGFPE,
+        SIGSEGV, SIGILL, SIGQUIT, SIGTSTP
+    };
+
+    int count = sizeof(signals_to_catch) / sizeof(int);
+
+    // Register each signal handler
+    int iter;
+    for ( iter = 0 ; iter < count; ++iter) {
+        if (signal(signals_to_catch[iter], handle_signal) == SIG_ERR) {
+            perror("signal");
+        }
+    }
+
+    // Keep program alive to receive signals
+    while (1) {
+        pause();  // wait for signal
+    }
+
+    return 0;
+}
+```
+
 ## [C Process Control](https://wikipedia.org/wiki/C_process_control)
 
 ## Severals
