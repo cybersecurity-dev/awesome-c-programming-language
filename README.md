@@ -113,6 +113,12 @@ int main(void) {
 ## [Dynamic Memory Management](https://wikipedia.org/wiki/C_dynamic_memory_allocation)
 
 ### [malloc](https://man7.org/linux/man-pages/man3/malloc.3p.html)
+
+```c
+#include <stdlib.h>
+void *malloc(size_t size);
+```
+
 ```c
 int ptrIArray[10];
 ```
@@ -133,7 +139,13 @@ int *ptrIArray = (int*)malloc(10 * sizeof(int));
 ```
 
 ### [calloc](https://man7.org/linux/man-pages/man3/calloc.3p.html)
+```c
+#include <stdlib.h>
+void *calloc(size_t nelem, size_t elsize);
+```
+
 Allocates memory for an array of num objects of size and initializes all bytes in the allocated storage to zero.
+
 ```c
 int *ptrIArray = (int *) calloc(5, sizeof(int));
 for (iter = 0; iter < 5; ++i) {
@@ -171,7 +183,17 @@ for (iter = 0; iter < 5; ++i) {
 * avoid losing existing data
 * avoid manually copying the old array
 
+```c
+#include <stdlib.h>
+void *realloc(void *ptr, size_t size);
+```
+* If ptr is a `null pointer`, realloc() shall be equivalent to malloc() for the specified size.
+
 ### [free](https://man7.org/linux/man-pages/man3/free.3p.html)
+```c
+#include <stdlib.h>
+void free(void *ptr);
+```
 Releases the specified block of memory back to the system.
 ```c
 free(ptrIArray);
