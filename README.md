@@ -190,14 +190,41 @@ void *realloc(void *ptr, size_t size);
 * If ptr is a `null pointer`, realloc() shall be equivalent to malloc() for the specified size.
 
 ### [free](https://man7.org/linux/man-pages/man3/free.3p.html)
+
 ```c
 #include <stdlib.h>
 void free(void *ptr);
 ```
 Releases the specified block of memory back to the system.
+
+❗`free()` does NOT know the array size.
+
+❗`free()` does NOT need the array size.
+
+❗`free()` only needs the pointer.
+
+
+
+```
+            ptrIArray pointer ↓
+┌──────────────┬──────────────────────────┐
+│ metadata     │  your allocated memory   │
+└──────────────┴──────────────────────────┘
+```
+
 ```c
 free(ptrIArray);
 ```
+
+The memory allocator:
+
+* looks at the pointer
+* steps backwards to read the hidden metadata
+* gets the size and allocation info
+* frees the correct amount of memory
+
+**`That's why you do NOT provide the size to free()`**.
+
 
 ## [Structures](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Structures.html)
 A struct in C is a  user-defined data type grouped together under one name.
