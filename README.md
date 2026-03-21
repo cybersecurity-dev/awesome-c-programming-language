@@ -111,7 +111,7 @@ int main(void) {
 ```
 ## [Dynamic Memory Management](https://wikipedia.org/wiki/C_dynamic_memory_allocation)
 
-### malloc
+### [malloc](https://man7.org/linux/man-pages/man3/malloc.3p.html)
 ```c
 int ptrIArray[10];
 ```
@@ -131,7 +131,7 @@ int *ptrIArray = (int *)raw;
 int *ptrIArray = (int*)malloc(10 * sizeof(int));
 ```
 
-### calloc
+### [calloc](https://man7.org/linux/man-pages/man3/calloc.3p.html)
 Allocates memory for an array of num objects of size and initializes all bytes in the allocated storage to zero.
 ```c
 int *ptrIArray = (int *) calloc(5, sizeof(int));
@@ -163,9 +163,14 @@ for (iter = 0; iter < 5; ++i) {
             * Structs
             * Strings
 
-### realloc
+### [realloc](https://man7.org/linux/man-pages/man3/realloc.3p.html)
+`realloc()` is used to resize previously allocated memory (from `malloc()`, `calloc()`, or a previous `realloc()` call). It allows you to:
+* increase array size
+* shrink array size
+* avoid losing existing data
+* avoid manually copying the old array
 
-### free
+### [free](https://man7.org/linux/man-pages/man3/free.3p.html)
 Releases the specified block of memory back to the system.
 ```c
 free(ptrIArray);
