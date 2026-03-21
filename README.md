@@ -177,6 +177,7 @@ for (iter = 0; iter < 5; ++i) {
             * Strings
 
 ### [realloc](https://man7.org/linux/man-pages/man3/realloc.3p.html)
+
 `realloc()` is used to resize previously allocated memory (from `malloc()`, `calloc()`, or a previous `realloc()` call). It allows you to:
 * increase array size
 * shrink array size
@@ -187,7 +188,9 @@ for (iter = 0; iter < 5; ++i) {
 #include <stdlib.h>
 void *realloc(void *ptr, size_t size);
 ```
+
 * If ptr is a `null pointer`, realloc() shall be equivalent to malloc() for the specified size.
+
 
 ```c
 int main() {
@@ -245,6 +248,12 @@ int main() {
     * allocate a new block (different memory address)
     * copy old data to the new memory
     * free the old block
+
+
+* If `realloc()` **fails** (returns `NULL`) Then:
+    * old memory is NOT freed
+    * old pointer is still valid
+    * you must free manually if you want
 
 ### [free](https://man7.org/linux/man-pages/man3/free.3p.html)
 
