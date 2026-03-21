@@ -29,6 +29,7 @@
 - [Dynamic Memory Management](#dynamic-memory-management)
     - [malloc](#malloc)
     - [calloc](#calloc)
+    - [realloc](#realloc)
     - [free](#free) 
 - [Structures](#structures)
 - [Unions](#unions)
