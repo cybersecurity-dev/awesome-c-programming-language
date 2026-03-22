@@ -411,6 +411,40 @@ int main() {
 
 ## [C String Handling](https://wikipedia.org/wiki/C_string_handling)
 
+
+### String Manipulation
+
+
+| **Byte string** | **Wide string** | **Description** |
+|------------------|------------------|------------------|
+| `strcpy`         | `wcscpy`         | Copies one string to another |
+| `strncpy`        | `wcsncpy`        | Writes exactly *n* bytes/characters, copying from source or adding nulls |
+| `strcat`         | `wcscat`         | Appends one string to another |
+| `strncat`        | `wcsncat`        | Appends no more than *n* bytes/characters from one string to another |
+| `strxfrm`        | `wcsxfrm`        | Transforms a string according to the current locale |
+
+* `strcpy` / `wcscpy`:
+
+    **Byte version**:
+    ```c
+    char dest[20];
+    strcpy(dest, "Hello World!..");
+    printf("%s", dest);       // Output: Hello World!..
+    ```
+    
+    **Wide version**:
+    ```c
+    wchar_t dest[20];
+    wcscpy(dest, L"Hello World!..");
+    wprintf(L"%ls", dest);    // Output: Hello World!..
+    ```
+* `strncpy` / `wcsncpy`:
+
+
+### String Examination
+
+### Miscellaneous
+
 ## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
 * ❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
