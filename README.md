@@ -440,6 +440,21 @@ int main() {
     ```
 * `strncpy` / `wcsncpy`:
 
+    **Byte version**:
+    ```c
+    char dest[20];
+    strncpy(dest, "Hello World!..", 5);
+    dest[5] = '\0'
+    printf("%s", dest);       // Output: Hello
+    ```
+    
+    **Wide version**:
+    ```c
+    wchar_t dest[20];
+    wcsncpy(dest, L"Hello World!..", 5);
+    dest[5] = L'\0'
+    wprintf(L"%ls", dest);    // Output: Hello
+    ```
 
 ### String Examination
 
