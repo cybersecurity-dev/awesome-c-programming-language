@@ -467,9 +467,26 @@ int main() {
     **Wide version**:
     ```c
     wchar_t dest[20] L"Hello;
-    wcscat(dest, L"World!..");
+    wcscat(dest, L" World!..");
     wprintf(L"%ls", dest);    // Output: Hello World!..
     ```
+
+* `strncat` / `wcsncat`: 👉 `Appends no more than n characters`
+
+    **Byte version**:
+    ```c
+    char dest[20] = "Hello;
+    strncat(dest, " World!..", 6);
+    printf("%s", dest);       // Output: Hello World
+    ```
+    
+    **Wide version**:
+    ```c
+    wchar_t dest[20] L"Hello;
+    wcsncat(dest, L" World!..", 6);
+    wprintf(L"%ls", dest);    // Output: Hello World
+    ```
+
 
 ### String Examination
 
