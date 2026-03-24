@@ -423,7 +423,7 @@ int main() {
 | `strncat`        | `wcsncat`        | Appends no more than *n* bytes/characters from one string to another |
 | `strxfrm`        | `wcsxfrm`        | Transforms a string according to the current locale |
 
-* `strcpy` / `wcscpy`:
+* `strcpy` / `wcscpy`: 👉 `Copies one string into another`
 
     **Byte version**:
     ```c
@@ -438,7 +438,7 @@ int main() {
     wcscpy(dest, L"Hello World!..");
     wprintf(L"%ls", dest);    // Output: Hello World!..
     ```
-* `strncpy` / `wcsncpy`:
+* `strncpy` / `wcsncpy`: 👉 `Copies exactly n characters`
 
     **Byte version**:
     ```c
@@ -454,6 +454,21 @@ int main() {
     wcsncpy(dest, L"Hello World!..", 5);
     dest[5] = L'\0'
     wprintf(L"%ls", dest);    // Output: Hello
+    ```
+* `strcat` / `wcscat`: 👉 `Appends a string to the end of another`
+
+    **Byte version**:
+    ```c
+    char dest[20] = "Hello;
+    strcat(dest, " World!..");
+    printf("%s", dest);       // Output: Hello World!..
+    ```
+    
+    **Wide version**:
+    ```c
+    wchar_t dest[20] L"Hello;
+    wcscat(dest, L"World!..");
+    wprintf(L"%ls", dest);    // Output: Hello World!..
     ```
 
 ### String Examination
