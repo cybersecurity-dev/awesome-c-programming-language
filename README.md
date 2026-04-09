@@ -50,6 +50,8 @@
 
 ## Scope & Name Lookup
 
+[🔼 Back to top](#awesome-c-programming-language-)
+
 ## [Pointers](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Pointers.html)
 
 ```c
@@ -110,6 +112,9 @@ int main(void) {
     return 0;
 }
 ```
+
+[🔼 Back to top](#awesome-c-programming-language-)
+
 ## [Dynamic Memory Management](https://wikipedia.org/wiki/C_dynamic_memory_allocation)
 
 ### [malloc](https://man7.org/linux/man-pages/man3/malloc.3p.html)
@@ -289,6 +294,7 @@ The memory allocator:
 
 **`That's why you do NOT provide the size to free()`**.
 
+[🔼 Back to top](#awesome-c-programming-language-)
 
 ## [Structures](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Structures.html)
 A struct in C is a  user-defined data type grouped together under one name.
@@ -316,6 +322,7 @@ int main() {
     return 0;
 }
 ```
+[🔼 Back to top](#awesome-c-programming-language-)
 
 ## [Unions](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Unions.html)
 A `union` is like a struct, but all members share the same memory location. This means:
@@ -344,6 +351,7 @@ int main() {
     return 0;
 }
 ```
+[🔼 Back to top](#awesome-c-programming-language-)
 
 ## [Enumarations](https://cppreference.com/w/c/language/enum.html)
 
@@ -492,6 +500,8 @@ int main() {
 
 ### Miscellaneous
 
+[🔼 Back to top](#awesome-c-programming-language-)
+
 ## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
 * ❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
@@ -593,11 +603,17 @@ int main() {
 | 30            | SIGPWR      | Power failure                                | ✔ Yes      |
 | 31            | SIGSYS      | Bad system call                              | ✔ Yes      |
 
+[🔼 Back to top](#awesome-c-programming-language-)
+
 ## [C Process Control](https://wikipedia.org/wiki/C_process_control)
+
+[🔼 Back to top](#awesome-c-programming-language-)
 
 ## Severals
 - [cJSON](https://github.com/DaveGamble/cJSON) - Ultralightweight JSON parser in ANSI C.
 - [Doxygen](https://doxygen.nl/) -  Doxygen is a widely-used documentation generator tool in software development.
+
+[🔼 Back to top](#awesome-c-programming-language-)
 
 ## Compiler/Debugger
 - [MSVC & GCC & Clang](https://github.com/cybersecurity-dev/PowerShell-Toolkit/#install-c-cpp) - installation step of MSVC/GCC/Clang compiler in **Windows**
