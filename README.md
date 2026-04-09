@@ -43,6 +43,20 @@
 - [Contributors](#contributors)
 
 ## Declarations & Definitions
+* **`Function Declarations`**: A function can be declared several times in a program, but `all declarations` for a given function must be compatible;
+    * the return type is the same
+    * the parameters have the same type. 
+    ```c
+    float square(float x);
+    ```
+Function declarations do not `allocate storage`.
+
+* **`Function Definitions`**:
+    ```c
+    float square(float x) {
+        return x*x;
+    }
+    ```
 
 ## Type Conversions
 
