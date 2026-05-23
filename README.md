@@ -71,7 +71,6 @@ Function declarations do not `allocate storage`.
 ```c
 int ival;
 double darray[5];
-
 ```
 
 - ival has type int; we say &ival is a `"pointer to int."`
@@ -433,9 +432,7 @@ int main() {
 
 ## [C String Handling](https://wikipedia.org/wiki/C_string_handling)
 
-
 ### String Manipulation
-
 
 | **Byte string** | **Wide string** | **Description** |
 |------------------|------------------|------------------|
@@ -444,71 +441,6 @@ int main() {
 | `strcat`         | `wcscat`         | Appends one string to another |
 | `strncat`        | `wcsncat`        | Appends no more than *n* bytes/characters from one string to another |
 | `strxfrm`        | `wcsxfrm`        | Transforms a string according to the current locale |
-
-* `strcpy` / `wcscpy`: 👉 `Copies one string into another`
-
-    **Byte version**:
-    ```c
-    char dest[20];
-    strcpy(dest, "Hello World!..");
-    printf("%s", dest);       // Output: Hello World!..
-    ```
-    
-    **Wide version**:
-    ```c
-    wchar_t dest[20];
-    wcscpy(dest, L"Hello World!..");
-    wprintf(L"%ls", dest);    // Output: Hello World!..
-    ```
-* `strncpy` / `wcsncpy`: 👉 `Copies exactly n characters`
-
-    **Byte version**:
-    ```c
-    char dest[20];
-    strncpy(dest, "Hello World!..", 5);
-    dest[5] = '\0'
-    printf("%s", dest);       // Output: Hello
-    ```
-    
-    **Wide version**:
-    ```c
-    wchar_t dest[20];
-    wcsncpy(dest, L"Hello World!..", 5);
-    dest[5] = L'\0'
-    wprintf(L"%ls", dest);    // Output: Hello
-    ```
-* `strcat` / `wcscat`: 👉 `Appends a string to the end of another`
-
-    **Byte version**:
-    ```c
-    char dest[20] = "Hello;
-    strcat(dest, " World!..");
-    printf("%s", dest);       // Output: Hello World!..
-    ```
-    
-    **Wide version**:
-    ```c
-    wchar_t dest[20] L"Hello;
-    wcscat(dest, L" World!..");
-    wprintf(L"%ls", dest);    // Output: Hello World!..
-    ```
-
-* `strncat` / `wcsncat`: 👉 `Appends no more than n characters`
-
-    **Byte version**:
-    ```c
-    char dest[20] = "Hello;
-    strncat(dest, " World!..", 6);
-    printf("%s", dest);       // Output: Hello World
-    ```
-    
-    **Wide version**:
-    ```c
-    wchar_t dest[20] L"Hello;
-    wcsncat(dest, L" World!..", 6);
-    wprintf(L"%ls", dest);    // Output: Hello World
-    ```
-
 
 ### String Examination
 
@@ -644,5 +576,8 @@ You can access the my other awesome lists [here](https://cyberthreatdefence.com/
 
 ### Contributors
 [Thanks goes to these contributors](https://github.com/cybersecurity-dev/awesome-c-programming-language/graphs/contributors)!
+
+### License
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
 
 [🔼 Back to top](#awesome-c-programming-language-)
