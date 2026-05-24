@@ -29,7 +29,7 @@
 - [Enumarations](#enumarations)
 - [Bitwise Operations](#bitwise-operations)
 - [C String Handling](#c-string-handling)
-- [C Signal Handling](#c-signal-handling)
+- [Signal Handling](#signal-handling)
 - [C Process Control](#c-process-control)
 - [My Other Awesome Lists](#my-other-awesome-lists)
 - [Contributing](#contributing)
@@ -225,72 +225,7 @@ An enumeration (enum) is a user-defined data type that lets you assign names to 
 
 [🔼 Back to top](#awesome-c-programming-language-)
 
-## [C Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
-
-* ❌ `SIGKILL` cannot be handled, caught, ignored, or blocked
-* ❌ `SIGSTOP` cannot be handled either.
-
-This is a rule of Unix/Linux systems — no C program can override this. These two signals are designed to always work, even if the process is misbehaving.
-**`SIGKILL`** immediately stops (`kills`) the process — the **kernel** does not let your program run anything in response.
-
-| Signal Number | `Name`    | Meaning         | `Catchable?` |
-|---------------|---------|------------------|-------------|
-| 9             | SIGKILL | Kill immediately | ❌ No       |
-| 19            | SIGSTOP | Stop immediately | ❌ No       |
-
-```c
-// Signal handler function
-void handle_signal(int sig)
-{
-    printf("\nReceived signal %d : ", sig);
-
-    switch (sig) {
-        case SIGINT:  printf("SIGINT\t(Ctrl + C)\n"); break;
-        case SIGTERM: printf("SIGTERM\t(termination request)\n"); break;
-        case SIGABRT: printf("SIGABRT\t(abort)\n"); break;
-        case SIGFPE:  printf("SIGFPE\t(floating point exception)\n"); break;
-        case SIGSEGV: printf("SIGSEGV\t(segmentation fault)\n"); break;
-        case SIGILL:  printf("SIGILL\t(illegal instruction)\n"); break;
-        case SIGQUIT: printf("SIGQUIT\t(Ctrl+\\)\n"); break;
-        case SIGTSTP: printf("SIGTSTP\t(Ctrl+Z)\n"); break;
-        default:      printf("Unhandled signal\n"); break;
-    }
-
-    // exit on specific signals
-    if (sig == SIGTERM || sig == SIGINT) {
-        printf("Exiting program...\n");
-        exit(0);
-    }
-}
-
-int main() {
-    printf("Process ID: %d\n", getpid());
-    printf("Waiting for signals... Press Ctrl+C to exit.\n\n");
-
-    // List of signals we want to catch
-    int signals_to_catch[] = {
-        SIGINT, SIGTERM, SIGABRT, SIGFPE,
-        SIGSEGV, SIGILL, SIGQUIT, SIGTSTP
-    };
-
-    int count = sizeof(signals_to_catch) / sizeof(int);
-
-    // Register each signal handler
-    int iter;
-    for ( iter = 0 ; iter < count; ++iter) {
-        if (signal(signals_to_catch[iter], handle_signal) == SIG_ERR) {
-            perror("signal");
-        }
-    }
-
-    // Keep program alive to receive signals
-    while (1) {
-        pause();  // wait for signal
-    }
-
-    return 0;
-}
-```
+## [Signal Handling](https://wikipedia.org/wiki/C_signal_handling)
 
 | Signal Number | `Name`      | Meaning                                      | `Catchable?` |
 |---------------|-------------|----------------------------------------------|------------|
