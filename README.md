@@ -28,7 +28,7 @@
 - [Unions](#unions)
 - [Enumarations](#enumarations)
 - [Bitwise Operations](#bitwise-operations)
-- [C String Handling](#c-string-handling)
+- [String Library](#string-library)
 - [Signal Handling](#signal-handling)
 - [C Process Control](#c-process-control)
 - [My Other Awesome Lists](#my-other-awesome-lists)
@@ -204,10 +204,11 @@ An enumeration (enum) is a user-defined data type that lets you assign names to 
         return 0;
     }
     ```
+You can find more details at the [**link**](https://github.com/cybersecurity-dev/awesome-c-programming-language/blob/main/notebook/C%20language/Declarations/Enumerations.md)
 
 ## [Bitwise Operations](https://wikipedia.org/wiki/Bitwise_operations_in_C)
 
-## [C String Handling](https://wikipedia.org/wiki/C_string_handling)
+## [Strings library](https://wikipedia.org/wiki/C_string_handling)
 
 ### String Manipulation
 
@@ -220,6 +221,8 @@ An enumeration (enum) is a user-defined data type that lets you assign names to 
 | `strxfrm`        | `wcsxfrm`        | Transforms a string according to the current locale |
 
 ### String Examination
+
+You can find more details at the [**link**](https://github.com/cybersecurity-dev/awesome-c-programming-language/tree/main/notebook/Strings%20library)
 
 ### Miscellaneous
 
@@ -260,6 +263,8 @@ An enumeration (enum) is a user-defined data type that lets you assign names to 
 | 29            | SIGIO       | I/O now possible                             | ✔ Yes      |
 | 30            | SIGPWR      | Power failure                                | ✔ Yes      |
 | 31            | SIGSYS      | Bad system call                              | ✔ Yes      |
+
+You can find more details at the [**link**](https://github.com/cybersecurity-dev/awesome-c-programming-language/blob/main/notebook/C%20language/Miscellaneous/Signal%20handling.md)
 
 [🔼 Back to top](#awesome-c-programming-language-)
 
