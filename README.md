@@ -15,12 +15,67 @@
 <p align="center">
     <a href="https://github.com/cybersecurity-dev/"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/github.svg" alt="GitHub"></a>
     &nbsp;
-    <a href="https://www.youtube.com/@CyberThreatDefence"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/youtube.svg" alt="YouTube"></a>
+    <a href="https://www.youtube.com/@CyberThreatDefense"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/youtube.svg" alt="YouTube"></a>
     &nbsp;
     <a href="https://cyberthreatdefence.com/my_awesome_lists"><img height="20" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/blog.svg" alt="My Awesome Lists"></a>
     <img src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/bar.gif">
 </p>
 
+```mermaid
+mindmap
+  root((ANSI C))
+
+    Language Basics
+      Variables
+      Types
+      Operators
+      Expressions
+
+    Program Control
+      Conditions
+      Loops
+      Jumps
+
+    Functions
+      Prototypes
+      Recursion
+      Storage Classes
+
+    Memory
+      Stack
+      Heap
+      Pointers
+      malloc
+      free
+
+    User Types
+      Struct
+      Union
+      Enum
+
+    Files
+      Text Files
+      Binary Files
+
+    Libraries
+      stdio
+      stdlib
+      string
+      math
+      time
+
+    System Programming
+      Processes
+      Signals
+      Threads
+      Sockets
+
+    Advanced
+      Bitwise Operations
+      Function Pointers
+      Preprocessor
+      Compiler Internals
+```
 ## 📖 Contents
 - [Pointers](#pointers)
 - [Dynamic Memory Management](#dynamic-memory-management)
