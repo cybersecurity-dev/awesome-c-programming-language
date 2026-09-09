@@ -8,34 +8,27 @@
 ```mermaid
 flowchart LR
 
-A[Source File .c]
+subgraph Build["Build Process"]
+A[Source .c]
+--> B[Preprocessor]
+--> C[Compiler]
+--> D[Assembler]
+--> E[Object .o]
+--> F[Linker]
+--> G[Executable]
+end
 
-A --> B[Preprocessor]
-
-B --> C[Expanded Source]
-
-C --> D[Compiler]
-
-D --> E[Assembly Code]
-
-E --> F[Assembler]
-
-F --> G[Object File .o]
-
-G --> H[Linker]
-
-H --> I[Executable]
-
-I --> J[Loader]
-
-J --> K[Program in Memory]
-
-K --> L[Execution]
+subgraph Runtime["Execution Process"]
+G --> H[Loader]
+--> I[Memory]
+--> J[CPU Execution]
+end
 
 style A fill:#3498db,color:#fff
-style D fill:#2ecc71,color:#fff
-style H fill:#f39c12,color:#fff
-style L fill:#e74c3c,color:#fff
+style C fill:#2ecc71,color:#fff
+style F fill:#f39c12,color:#fff
+style J fill:#e74c3c,color:#fff
+
 ```
 
 # **`Awesome`** [C](https://wikipedia.org/wiki/ANSI_C) Programming [Language](https://wikipedia.org/wiki/C_(programming_language)) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -116,7 +109,7 @@ mindmap
 - [Unions](#unions)
 - [Enumarations](#enumarations)
 - [Bitwise Operations](#bitwise-operations)
-- [String Library](#string-library)
+- [String Library](#strings-library)
 - [Signal Handling](#signal-handling)
 - [C Process Control](#c-process-control)
 - [My Other Awesome Lists](#my-other-awesome-lists)
