@@ -5,6 +5,39 @@
         </a>
     </p>
 
+```mermaid
+flowchart LR
+
+A[Source File .c]
+
+A --> B[Preprocessor]
+
+B --> C[Expanded Source]
+
+C --> D[Compiler]
+
+D --> E[Assembly Code]
+
+E --> F[Assembler]
+
+F --> G[Object File .o]
+
+G --> H[Linker]
+
+H --> I[Executable]
+
+I --> J[Loader]
+
+J --> K[Program in Memory]
+
+K --> L[Execution]
+
+style A fill:#3498db,color:#fff
+style D fill:#2ecc71,color:#fff
+style H fill:#f39c12,color:#fff
+style L fill:#e74c3c,color:#fff
+```
+
 # **`Awesome`** [C](https://wikipedia.org/wiki/ANSI_C) Programming [Language](https://wikipedia.org/wiki/C_(programming_language)) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [**`ANSI C`**](https://wikipedia.org/wiki/ANSI_C) | [**`C99`**](https://wikipedia.org/wiki/C99) | [**`C11`**](https://wikipedia.org/wiki/C11_(C_standard_revision)) | [**`C17`**](https://wikipedia.org/wiki/C17_(C_standard_revision)) | [**`C23`**](https://wikipedia.org/wiki/C23_(C_standard_revision))
 </div>
