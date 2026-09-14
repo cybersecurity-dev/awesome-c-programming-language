@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: C Programming Notebook
+  structure:
+    - type: space
+      key: notebook
+      title: Notebook
+      path: undefined
+      default: true
+      content:
+        directory: ./
